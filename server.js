@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
+const path = require('path');
 require('dotenv').config(); // for using environment variables 
 const passport = require('passport'); // User authentithication 
 
@@ -30,7 +31,6 @@ app.get('*', (req, res) => {
 
 // Password config 
 require('./passport'); // Make sure to specify the correct path to your passport.js file
-
 
 // Connecting to the port 
 const PORT = process.env.PORT || 3000;
